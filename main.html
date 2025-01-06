@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symbol Number - Game Rules</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(120deg, #f6d365, #fda085);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      animation: slideIn 1s ease-out;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+      color: white;
+      text-align: center;
+      padding: 1.5em;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    /* Content */
+    .content {
+      padding: 2em;
+    }
+
+    .content h2 {
+      margin-bottom: 1em;
+      font-size: 1.8rem;
+      color: #333;
+      position: relative;
+    }
+
+    .content h2::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #ff9a9e;
+      margin-top: 0.5em;
+      animation: growLine 1s ease-in-out;
+    }
+
+    .content ol, .content ul {
+      margin-top: 1em;
+      margin-left: 1em;
+      color: #555;
+    }
+
+    .content ol li {
+      margin-bottom: 0.8em;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .footer {
+      background: #fda085;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes growLine {
+      from {
+        width: 0;
+      }
+      to {
+        width: 50px;
+      }
+    }
+
+    /* Button */
+    .content .back-to-top {
+      display: inline-block;
+      margin-top: 1.5em;
+      padding: 0.8em 1.5em;
+      background: linear-gradient(120deg, #f6d365, #fda085);
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .content .back-to-top:hover {
+      transform: scale(1.05);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      Symbol Number - Game Rules
+    </div>
+    <div class="content">
+      <h2>How to Play</h2>
+      <ol>
+        <li><b>Setup:</b> Deal 6 cards to each player. Place the rest in the bank.</li>
+        <li><b>Start:</b> Place the top card of the bank in the middle. The first player matches the card's symbol.</li>
+        <li><b>Turns:</b> Play a card matching either the symbol or the number of the card on the table.</li>
+        <li><b>Draw:</b> If you can't play, draw a card from the bank. If the bank is empty, match either symbol or number.</li>
+        <li><b>Winning:</b> The first player to use all their cards wins!</li>
+      </ol>
+
+      <h2>Special Rules</h2>
+      <ul>
+        <li>If the bank is empty and you can't play, you may match either symbol or number.</li>
+        <li>If no players can make a move, the game ends in a draw.</li>
+      </ul>
+
+      <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+    </div>
+    <div class="footer">
+      © 2025 Symbol Number Game
+    </div>
+  </div>
+
+  <script>
+    // Smooth Scroll to Top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
